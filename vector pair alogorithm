@@ -1,0 +1,23 @@
+#vector pair for two array  
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+ // vector pair initialize
+   vector< pair<int,int> >vec;
+   int a[]={20,30,10};
+   int b[]={9,100,10};
+   for(int i=0;i<3;i++)
+   {
+       vec.push_back(make_pair(a[i],b[i]));
+   }
+   sort(vec.begin(),vec.end());
+
+   for(int i=0;i<3;i++)
+   {
+       cout<<vec[i].first<<" "<<vec[i].second<<" ";
+   }
+
+}
+
