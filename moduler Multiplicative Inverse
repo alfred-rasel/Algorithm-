@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std ;
+int power(int x,unsigned y,unsigned M)
+{
+    if(y==0) return 1;
+    int p=power(x,y/2,M)%M;
+    p=(p*p)%M;
+   return (y%2==0)? p:(p*x)%M;
+
+
+}
+int findgcd(int a,int b )
+{
+    if(a==0) return b;
+    return findgcd(b%a,a);
+
+}
+int modularInverse(int a,int m)
+{
+    int  gcd=findgcd(a,m);
+    if(gcd!=1 ) cout<<"inverse not exixt";
+    cout<<power(a,m-2,m);
+
+}
+int main()
+{
+    int a,m;
+    cin>>a;
+    cin>>m;
+    modularInverse(a,m);
+   
+
+    // m is prime 
+
+}
