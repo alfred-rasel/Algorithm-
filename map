@@ -1,0 +1,29 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int>v(n);
+    int i;
+    for(i=0;i< n;i++) cin>>v[i];
+    map<int,int>mp;
+    for(i=0;i<n;i++)
+    {
+        mp[v[i]]++;
+    }
+    int max=0,rem=0;
+    
+    for(auto it:mp)
+    {
+        cout<<it.first<<" "<<it.second<<endl;
+        if(it.second>max)
+        {
+            max=it.second;
+            rem=it.first;
+        }
+    }
+    cout<<rem<<" ->>>"<<max<<endl;
+
+}
